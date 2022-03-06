@@ -15,6 +15,7 @@ img {
 section {
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
 
 }
 img:hover {
@@ -32,13 +33,14 @@ div {
 nav {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     margin: -10px;
-    background-color: #050505;
+    background-color: #8ff2ebab;
     padding: 3px;
 }
 
 nav p {
-    padding: 0% 0% 0% 40%;
+    align-items: flex-end;
     padding-top: 50px;
 }
 h1 {
