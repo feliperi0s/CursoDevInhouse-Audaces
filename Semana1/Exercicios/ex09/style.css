@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+body {
+    background-color: bisque;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+#imageProfile {
+    width: 200px;
+}
+
+#profileName {
+    width: 35%;
+    text-align: center;
+}
+#categories {
+    width: 35%;
+    text-align: center;
+}
