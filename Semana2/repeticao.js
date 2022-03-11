@@ -48,9 +48,11 @@
 
 // }
 
-var arr = [0, 1, 0, 1, 0, 1];
+// var arr = [0, 1, 0, 1, 0, 1];
 
-for (var i=0; i< arr.length; i++){
-    var interruptor = (arr[i] === 0)? 'Desligado' : 'Ligado';
-    console.log(arr[i] + '-' + interruptor);
-}
+// for (var i=0; i< arr.length; i++){
+//     var interruptor = (arr[i] === 0)? 'Desligado' : 'Ligado';
+//     console.log(arr[i] + '-' + interruptor);
+// }
+
+
