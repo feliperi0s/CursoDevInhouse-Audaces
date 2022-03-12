@@ -37,10 +37,21 @@ a {
 #mainShirt {
     width: 300px;
     margin-top: 20px;
+    transition: 1s all;
 }
 .small {
     width: 100px;
+    transition: 1s all;
 }
+
+.small:hover {
+    transform: scale(1.1);
+}
+
+#mainShirt:hover {
+    transform: scale(1.1);
+}
+
 section {
     display: flex;
     flex-wrap: wrap;
@@ -62,12 +73,13 @@ section p {
 }
 
 #similar {
-    text-align: center;
+    text-align: left;
     background-color: white;
     width: 80%;
     margin: auto;
     padding: 20px 0px;
-
+    color: #801e00;
+    text-indent: 30px;
 }
 
 #similiarProduct {
@@ -83,14 +95,15 @@ section p {
 footer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: left;
     background-color: white;
     width: 80%;
     margin: auto;
+
 }
 
 footer p {
-    width: 50%;
+    width: 40%;
 }
 
 #review {
@@ -98,7 +111,13 @@ footer p {
     background-color: white;
     width: 80%;
     margin: auto;
-    padding: 20px 0px;}
+    padding: 20px 0px;
+    color: #801e00;
+}
+    
 
+    hr {
+     width: 98%;
+    }
 
 
