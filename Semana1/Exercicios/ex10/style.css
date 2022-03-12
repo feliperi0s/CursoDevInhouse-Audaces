@@ -3,29 +3,35 @@ body {
 }
 
 header{
-    background: #BBBBBB;
+    background: #F02C00;
     padding: 20px 0;
 }
 #navigation{
     position: relative;
     width: 450px;
-    margin: 0 auto;
+    height: 60px;
+    margin: auto auto;
+    background-color: #F02C00;
+    text-align: center;
+    
 }
 nav {
-    position: absolute;
+    background-color: #F02C00;
     top:10px;
     right: 0;
+    padding-top: 30px;
+    margin: -10px;
 }
 nav li {
     display: inline;
-    margin: 0 0 0 15px;    
+    margin: 0 0 0 15px;  
+    color: white;  
+    font-family: Arial, Helvetica, sans-serif;
 }
-nav a {
-    text-transform: uppercase;
-    color: #000000;
-    font-weight: bold;
-    font-size: 22px;
+
+a {
     text-decoration: none;
+    color: inherit;
 }
 
 #mainShirt {
@@ -39,10 +45,10 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-
+    font-family: Arial, Helvetica, sans-serif;
     background-color: white;
     width: 80%;
-    margin: 50px auto auto auto;
+    margin: 10px auto auto auto;
 
 
 }
@@ -56,7 +62,48 @@ section p {
     width: 300px;
 }
 
+#similar {
+    text-align: center;
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    padding: 20px 0px;
 
+}
+
+#similiarProduct {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    padding: 20px 0px;
+}
+
+
+#similiarProduct > div {
+    width: 25%;
+}
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: white;
+    width: 80%;
+    margin: auto;
+}
+
+footer p {
+    width: 50%;
+}
+
+#review {
+    text-align: center;
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    padding: 20px 0px;}
 
 
 
