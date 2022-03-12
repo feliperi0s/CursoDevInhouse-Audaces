@@ -49,9 +49,8 @@ section {
     background-color: white;
     width: 80%;
     margin: 10px auto auto auto;
-
-
 }
+
 section h1 {
     margin-top: 20px;
     font-size: 1em;
@@ -74,17 +73,13 @@ section p {
 #similiarProduct {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background-color: white;
     width: 80%;
     margin: auto;
     padding: 20px 0px;
 }
 
-
-#similiarProduct > div {
-    width: 25%;
-}
 footer {
     display: flex;
     flex-wrap: wrap;
