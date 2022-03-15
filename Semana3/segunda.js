@@ -1,6 +1,7 @@
-function disparaAlerta() {
-    alert("ooi")
-}
+// function disparaAlerta() {
+//     alert("ooi")
+// }
 
 
-console.log(disparaAlerta)
+// console.log(disparaAlerta)
+
