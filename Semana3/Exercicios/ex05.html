@@ -13,11 +13,32 @@
     <script>
         const input = document.createElement("input")
         input.type = "text"
-        input.addEventListener("keypress", function (a) {   
+        input.addEventListener("keypress", function (event) {
+                    const object = {
+                    97 : "yellow",
+                    112 :"black",
+                    32 :  {padding:"20px", fontSize:"22px"},
+                    13 :  "resetar"
+                }   
+            if (object[event.keyCode]) {
+                document.body.style.backgroundColor= object[event.keyCode];
+                console.log(event)
+                if (object[event.keyCode]=="resetar"){
+                    document.location.reload(true)
+                }
+                if (event.keyCode==32) {
+                    input.style.padding = object[event.keyCode].padding
+                    input.style.fontSize = object[event.keyCode].fontSize
+                }
+            }
+
+            
                 
-            alert("oi");
+
+
         })
         document.body.append(input);
+
 
 
     </script>
