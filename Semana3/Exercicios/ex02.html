@@ -13,32 +13,53 @@
         document.body.append(hed);
 
         var div = document.createElement("div");
-        var img = document.createElement("img");
-        img.src = "download.png";
-        img.className = "imagemDinamica";
-        document.body.append(div);
-        div.append(img)
+
+        var img1 = document.createElement("img");
+        img1.src = "download.png";
+        img1.className = "imagemDinamica";
+
+
+        var img2 = document.createElement("img");
+        img2.src = "01.png";
+        img2.className = "imagemDinamica";
+
+
+        const img3 = document.createElement("img");
+        img3.src = "04.jpg";
+        img3.className = "imagemDinamica";
+
+
+        div.append(img1,img2,img3)
+        document.body.append(div)
         
+        div.style.margin = "100px"
+        div.style.height = "200px"
+        div.style.display = "flex"
+        div.style.flexDirection = "row"
+        div.style.justifyContent = "space-between"
+
         
-        // var div2 = document.createElement("div");
-        // var img2 = document.createElement("img");
-        // img.src = "01.png";
-        // img.className = "imagemDinamica";
 
-    
-        
 
-        img.style.margin = "auto"
-        img.style.height = "200px"
-        img.style.display = "flex"
-        img.style.flexDirection = "row"
 
-        // const div3 = document.createElement("div");
-        // const img3 = document.createElement("img");
-        // img.src = "02.png";
-        // img.className = "imagemDinamica";
+        var artigo1 = document.createElement("div")
+        var artigo = document.createElement("p");
+        artigo.innerText = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. ";
+        document.body.append(artigo)
 
-        // document.body.append(img3);
+        artigo.style.textAlign = "center"
+        artigo.style.margin = "100px"
+
+        var lista1 = document.createElement("ul")
+        var element1 = document.createElement("li")
+        element1.innerText = "sabão"
+        var element2 = document.createElement("li")
+        element2.innerText = "cafe"
+        var element3 = document.createElement("li")
+        element3.innerText = "pao"
+
+        document.body.append(element1,element2,element3)
+
 
 
     </script>
