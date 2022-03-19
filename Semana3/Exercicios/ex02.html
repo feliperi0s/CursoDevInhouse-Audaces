@@ -14,22 +14,19 @@
 
         var div = document.createElement("div");
 
-        var img1 = document.createElement("img");
-        img1.src = "download.png";
-        img1.className = "imagemDinamica";
+        const listImage = ["download.png","01.png","04.jpg"]
+
+        for (let index = 0; index < listImage.length; index++) {
+            let image = document.createElement("img");
+            image.src = listImage[index];
+            image.className = "imagemDinamica";
+            div.append(image)
+        }
 
 
-        var img2 = document.createElement("img");
-        img2.src = "01.png";
-        img2.className = "imagemDinamica";
 
 
-        const img3 = document.createElement("img");
-        img3.src = "04.jpg";
-        img3.className = "imagemDinamica";
-
-
-        div.append(img1,img2,img3)
+        
         document.body.append(div)
         
         div.style.margin = "100px"
@@ -50,15 +47,15 @@
         artigo.style.textAlign = "center"
         artigo.style.margin = "100px"
 
-        var lista1 = document.createElement("ul")
-        var element1 = document.createElement("li")
-        element1.innerText = "sabão"
-        var element2 = document.createElement("li")
-        element2.innerText = "cafe"
-        var element3 = document.createElement("li")
-        element3.innerText = "pao"
+        let lista1 = document.createElement("ul")
 
-        document.body.append(element1,element2,element3)
+        let listaCompras = ["sabão","sopa","pão",]
+
+        for (let index = 0; index < listaCompras.length; index++) {
+            let lista = document.createElement("li");
+            lista.innerText = listaCompras[index];
+            document.body.append(lista)
+        }
 
 
 
