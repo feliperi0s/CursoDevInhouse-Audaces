@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
 body {
-    background-color: #64706F ;
+    margin: 0;
+    background-color: white;
 }
-    
+    /* css da navegação */
 #navegacao {display: flex;
     flex-direction: row;
     justify-content: center;
@@ -11,3 +12,115 @@ body {
     background-color: rgb(25, 64, 95);
     color: white;
 }
+
+/* css da galeria */
+
+#galeria {
+        background-color: #64706F ;
+    }
+    #galeria img {
+        width: 230px;
+        height: 350px;
+        transition: 1s all;
+    }
+    
+    #galeria section {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+    
+    }
+    #galeria img:hover {
+        transform: scale(1.1);
+        filter: grayscale(0.7);
+    }
+    #galeria div {
+        margin: 10px;
+        text-align: center;
+    }
+    
+    #galeria #filmName {
+        background-color: #8ff2ebab;
+    }
+    
+    
+    #galeria nav p {
+        align-items: flex-end;
+        padding-top: 50px;
+    }
+    #galeria h1 {
+        font-size: 3em;
+    }
+
+    /* css do video */
+    #video {
+        display: flex ;
+        justify-content: center;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    /* css do perfil */
+
+    #perfil {
+        background-color: #0f1;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+     #imageProfile {
+        width: 200px;
+    }
+    
+     #profileName {
+        width: 35%;
+        text-align: center;
+    }
+     #categories {
+        width: 35%;
+        text-align: center;
+        font-size: 0.8em;
+        text-align: end;
+    }
+    
+     footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+     #image1 {
+        width: 150px;
+    }
+    
+     #image2 {
+        width: 150px;
+    }
+    
+     #image3 {
+        width: 150px;
+    }
+    
+     #image4 {
+        width: 150px;
+    }
+    
+     #image {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 300px;
+    }
+    
+    #Attachments {
+        text-align: right;
+        border: 1px solid black;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        width: 300px;
+    }
+    
+    #perfil ul {
+        list-style: none;
+    }

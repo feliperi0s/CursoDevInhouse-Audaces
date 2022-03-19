@@ -13,10 +13,10 @@ var btn2 = document.getElementById('vid');
 var videos = document.querySelector('#video');
 btn2.addEventListener('click', function() {
     
-  if(videos.style.display === 'block') {
+  if(videos.style.display === 'flex') {
     videos.style.display = 'none';
   } else {
-    videos.style.display = 'block';
+    videos.style.display = 'flex';
   }
 });
 
@@ -24,9 +24,9 @@ var btn = document.getElementById('per');
 var perfil = document.querySelector('#perfil');
 btn.addEventListener('click', function() {
     
-  if(perfil.style.display === 'block') {
+  if(perfil.style.display === 'flex') {
     perfil.style.display = 'none';
   } else {
-    perfil.style.display = 'block';
+    perfil.style.display = 'flex';
   }
 });
