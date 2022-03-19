@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,28 +8,43 @@
     <title>Document</title>
 
 </head>
+
+
+
+
 <body>
-   
-    <script>
-
-        function fare(n) {
-            let trocar = n * 1.8 + 32
-            return trocar
-        }
-
-        n = 37
-
-        function celc(n2) {
-            let trocar = (n - 32) * 0.5555
-            return trocar
-        }
-
-        console.log(fare(n))
-        console.log(celc(n))
+    <h1>Para calcular de Celcius para farenheit</h1>
+    <input type="text" id="celFare" placeholder="digite o numero">
+    <button onclick="fare()">Enviar</button>
     
+    <h1>Para calcular de farenheit para Celcius</h1>
+    <input type="text" id="fareCel" placeholder="digite o numero">
+    <button onclick="celc()">Enviar</button>
 
-
-    </script>
-    
 </body>
+
+
+
+<script>
+    function fare() {
+        let numberInput = document.getElementById('celFare').value
+        let trocar = numberInput * 1.8 + 32
+        console.log(trocar)
+        return trocar
+
+    }
+
+
+    function celc() {
+        let numberInput = document.getElementById('fareCel').value
+        let trocar = (numberInput - 32) * 0.5555
+        console.log(trocar)
+        return trocar
+    }
+
+</script>
+</body>
+
+</body>
+
 </html>
