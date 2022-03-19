@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="antigo" onclick="voltar()">TEXTO ANTIGO</button>
+    <button id="novo" onclick="remover()">NOVO TEXTO</button>
+
+    <script>
+
+
+
+
+        const hed = document.createElement("h1");
+        hed.textContent = "Página dinamica";
+        document.body.append(hed);
+
+        var div = document.createElement("div");
+
+        var img1 = document.createElement("img");
+        img1.src = "download.png";
+        img1.className = "imagemDinamica";
+
+
+        var img2 = document.createElement("img");
+        img2.src = "01.png";
+        img2.className = "imagemDinamica";
+
+
+        const img3 = document.createElement("img");
+        img3.src = "04.jpg";
+        img3.className = "imagemDinamica";
+
+
+        div.append(img1,img2,img3)
+        document.body.append(div)
+        
+        div.style.margin = "100px"
+        div.style.height = "200px"
+        div.style.display = "flex"
+        div.style.flexDirection = "row"
+        div.style.justifyContent = "space-between"
+
+        
+
+
+
+        var artigo1 = document.createElement("div")
+        var artigo = document.createElement("p");
+        artigo.innerText = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. ";
+        document.body.append(artigo)
+
+        artigo.style.textAlign = "center"
+        artigo.style.margin = "100px"
+
+        var lista1 = document.createElement("ul")
+        var element1 = document.createElement("li")
+        element1.innerText = "sabão"
+        var element2 = document.createElement("li")
+        element2.innerText = "cafe"
+        var element3 = document.createElement("li")
+        element3.innerText = "pao"
+
+        document.body.append(element1,element2,element3)
+
+
+        function remover(){
+            const lista = element1
+            element1.innerText = "sapato"
+            const lista1 = element2
+            element2.innerText = "banana"
+            const lista2 = element3
+            element3.innerText = "maça"
+            const lista3 = document.createElement("li")
+            lista3.innerText = "cereal"
+            const lista4 = document.createElement("li")
+            lista4.innerText = "açucar"
+            document.body.append(lista3,lista4)
+            const novoTitulo = hed
+            //novoTitulo = document.createElement("h6")
+            novoTitulo.innerText = "novo";
+            artigo.style.boxShadow = "60px -16px teal"
+        }
+        function voltar (){
+            const ori1 = element1
+            element1.innerText = "sabão"
+            const ori2 = element2
+            element2.innerText = "cafe"
+            const ori3 = element3
+            element3.innerText = "pao"
+            const rem1 = lista3
+        }
+
+
+    </script>
+    
+</body>
+</html>
