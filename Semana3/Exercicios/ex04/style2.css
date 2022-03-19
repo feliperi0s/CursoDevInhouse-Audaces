@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+
+
+#perfil {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#imageProfile {
+    width: 200px;
+}
+
+#profileName {
+    width: 35%;
+    text-align: center;
+}
+#categories {
+    width: 35%;
+    text-align: center;
+    font-size: 0.8em;
+    text-align: end;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#image1 {
+    width: 150px;
+}
+
+#image2 {
+    width: 150px;
+}
+
+#image3 {
+    width: 150px;
+}
+
+#image4 {
+    width: 150px;
+}
+
+#image {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 300px;
+}
+
+#Attachments {
+    text-align: right;
+    border: 1px solid black;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 300px;
+}
+
+ul {
+    list-style: none;
+}
