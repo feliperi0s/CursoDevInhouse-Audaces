@@ -57,3 +57,5 @@ const vogais = nomes.filter(function (voga) {
 })
 
 console.log(vogais)
+
+//https://www.youtube.com/watch?v=BMUiFMZr7vk&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84
