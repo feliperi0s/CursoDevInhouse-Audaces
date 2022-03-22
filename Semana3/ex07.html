@@ -8,7 +8,29 @@
 </head>
 <body>
     
-<select name="" id=""><option value="texto">texto</option></select>
+<script>
+    const url = "https://servicodados.ibge.gov.br/api/v1/projecoes/populacao"
+
+    async function getdata() {
+            const data = await fetch(url)
+        .then(function (resposta){
+        return resposta.json();
+        })
+        .then(function (json) {
+          return json
+            
+        })
+    console.log(data)
+
+    let proje = document.createElement("p")
+    proje = data.projecao.populacao
+    document.body.append(proje)
+    }
+    getdata()
+
+
+
+</script>
 
 </body>
 </html>
