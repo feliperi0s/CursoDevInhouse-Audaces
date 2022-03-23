@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: cadetblue;
+        }
+        h1 {
+            color: white;
+            margin: auto;
+            text-align: center;
+        }
+        img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>RANDOM DOGS</h1>
+    
+    <script>
+        const url = "https://dog.ceo/api/breeds/image/random"
+        const div = document.createElement("div")
+        document.body.append(div)
+        div.style.flexWrap = "wrap"
+        
+
+        async function getdata() {
+            const data = await fetch(url)
+        .then(function (resposta){
+        return resposta.json();
+        })
+        .then(function (json) {
+          return json
+            
+        })
+    
+    
+    
+    let image = document.createElement("img")
+    image.src = data.message
+    div.append(image)
+    image.style.width = "250px"
+    image.style.height = "250px"
+    image.style.margin = "10px"
+    image.style.boxShadow = "5px 5px 15px 5px rgba(0,0,0,0.63)"
+    image.style.transition = "1s all"   
+
+        
+    }
+
+for (let index = 0; index < 10 ; index++) {
+    getdata();
+    
+}
+    
+
+    
+
+        
+        
+        
+    
+
+
+
+    </script>
+
+</body>
+</html>

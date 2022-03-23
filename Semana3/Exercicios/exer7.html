@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: linear-gradient(90deg, rgba(58,60,180,1) 0%, rgba(253,205,29,1) 77%, rgba(69,252,133,1) 100%);
+            text-align: center;
+        }
+        p {
+            font-size: 3em;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: blue;
+            text-shadow: 4px 2px 2px white;
+        }
+    </style>
+</head>
+<body>
+    
+<script>
+    const url = "https://servicodados.ibge.gov.br/api/v1/projecoes/populacao"
+
+    async function getdata() {
+            const data = await fetch(url)
+        .then(function (resposta){
+        return resposta.json();
+        })
+        .then(function (json) {
+          return json
+            
+        })
+    console.log(data)
+
+
+    
+    let proje = document.createElement("p")
+    proje.innerText = `A população total do Brasil é de ${data.projecao.populacao}`
+    document.body.append(proje)
+    
+    }
+    
+
+    getdata()
+
+
+
+</script>
+
+</body>
+</html>
