@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex10</title>
+</head>
+<body>
+    <script>
+        const tags = ['html', 'head', 'body', 'div', 'h1', 'span'];
+
+        const comecaComH = tags.filter(function (letra) {
+            return letra.startsWith('h')
+        })
+        const add = comecaComH.map(function (add) {
+            return `<${add}>`
+        })
+
+        add.forEach(function (show) {
+            console.log(show)
+        })
+
+    </script>
+</body>
+</html>
