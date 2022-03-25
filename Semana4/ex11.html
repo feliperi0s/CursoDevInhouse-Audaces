@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex11</title>
+</head>
+<body>
+    <script>
+
+        class Usuario {
+            constructor (login,senha){
+            this.login = login
+            this.senha = senha
+            }
+
+            autenticar(senha){
+                if (senha === this.senha) {
+                    return true
+                }else {
+                    return false
+                }
+            }
+
+
+        }
+        const user = new Usuario('admin','segredo');
+        console.log( user.autenticar('segredo') ); 
+        console.log( user.autenticar('errado') ); 
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
