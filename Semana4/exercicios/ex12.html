@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Personagem {
+            constructor (nome,percentualVida){
+            this.nome = nome;
+            this.percentualVida = 100
+            }
+            
+            sofreuDano(percentualDano)  {
+            if (this.percentualVida - percentualDano < 0) {
+            this.percentualVida = 0;
+            } else {
+            this.percentualVida -= percentualDano;
+            }
+        }
+            usouKitMedico(){
+        const percentualCura = 10;
+        if (this.percentualVida + percentualCura > 100) {
+            this.percentualVida = 100;
+        } else {
+            this.percentualVida += percentualCura;
+        }}
+            
+            
+        }
+        const jogador = new Personagem('Mr. Shooter');
+            console.log( jogador );
+            jogador.sofreuDano(30);
+            jogador.usouKitMedico();
+            console.log (jogador.percentualVida );
+                
+        
+    </script>
+</body>
+</html>
