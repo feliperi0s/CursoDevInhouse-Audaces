@@ -19,33 +19,30 @@
 
 <script>
 
-    function somar(){
+        var soma = 0
+        document.getElementById("um").disabled = false
+        document.getElementById("dois").disabled = false
+        document.getElementById("tres").disabled = false
+        document.getElementById("quatro").disabled = false
+
+        function somar(){
+        let texto = document.createElement("h1")
         let nuns = document.querySelectorAll("input")
         nuns.forEach(function numeros(num){
-        num = parseInt(num.value) + parseInt(num.value)
-        let total = 0;
-        for (let index = 0; index < num.length; index++) {
-            if (num[i] >=2) {
-                total += num[i]
-            };
-            return total;
-            console.log(total)
-        }
-
-        console.log(num)
-         })
-        
-    }
-    
-   
-
-    // let inputs = parseInt(document.querySelectorAll("input").value)
-    // var valor = parseInt(inputs.value);
-    // let numero1 = document.getElementsByName("um")
-
-    // console.log(numero1)
-    // console.log(valor)
-    // console.log(inputs)
+        num = parseInt(num.value)
+        soma += num 
+        if (nuns !== null && nuns !== ''){
+        document.getElementById("um").disabled = true
+        document.getElementById("dois").disabled = true
+        document.getElementById("tres").disabled = true
+        document.getElementById("quatro").disabled = true
+}
+             })
+             texto.innerText = `A soma dos 4 numeros é ${soma}`
+             document.body.append(texto)
+             texto.style.fontSize = "4em"
+             texto.style.textAlign = "center"
+            }
 
     
 
