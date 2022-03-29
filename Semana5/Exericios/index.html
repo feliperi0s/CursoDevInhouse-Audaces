@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,49 +7,31 @@
     <title>ex01</title>
 </head>
 <body>
-    
 
-        
-            <input type="number" name="um" id="um">
-            <input type="number" name="dos" id="dois">
-            <input type="number" name="tres" id="numeros">
-            <input type="number" name="quatro" id="numeros">
-            <button onclick="somar()">enviar</button>
-        
+    <input type="number" name="" id="">
+    <input type="number" name="" id="">
+    <input type="number" name="" id="">
+    <input type="number" name="" id="">
+    <button onclick="somar()">Enviar</button>
 
-<script>
+    <script>
+var soma = 0
 
-        var soma = 0
-        document.getElementById("um").disabled = false
-        document.getElementById("dois").disabled = false
-        document.getElementById("tres").disabled = false
-        document.getElementById("quatro").disabled = false
-
-        function somar(){
-        let texto = document.createElement("h1")
-        let nuns = document.querySelectorAll("input")
-        nuns.forEach(function numeros(num){
+function somar() {
+    let texto = document.createElement("h1")
+    let nuns = document.querySelectorAll("input")
+    nuns.forEach(function numeros(num) {
         num = parseInt(num.value)
-        soma += num 
-        if (nuns !== null && nuns !== ''){
-        document.getElementById("um").disabled = true
-        document.getElementById("dois").disabled = true
-        document.getElementById("tres").disabled = true
-        document.getElementById("quatro").disabled = true
+        soma += num
+        input.disaple = true
+    })
+    texto.innerText = `${soma}`
+    document.body.append(texto)
+
 }
-             })
-             texto.innerText = `A soma dos 4 numeros é ${soma}`
-             document.body.append(texto)
-             texto.style.fontSize = "4em"
-             texto.style.textAlign = "center"
-            }
-
-    
-
-    
 
 
-</script>
 
+    </script>
 </body>
 </html>
