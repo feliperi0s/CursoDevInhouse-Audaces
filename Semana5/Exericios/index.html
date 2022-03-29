@@ -7,22 +7,38 @@
     <title>ex01</title>
 </head>
 <body>
-    <div>
-        <input type="number" name="um" id="numeros">
-        <input type="number" name="dos" id="numeros">
-        <input type="number" name="tres" id="numeros">
-        <input type="number" name="quatro" id="numeros">
-    </div>
-    <div><button onclick="ler()">SOMAR</button></div>
+    
+
+        
+            <input type="number" name="um" id="um">
+            <input type="number" name="dos" id="dois">
+            <input type="number" name="tres" id="numeros">
+            <input type="number" name="quatro" id="numeros">
+            <button onclick="somar()">enviar</button>
+        
 
 <script>
 
-    let inputs = document.getElementById("numeros").value
-    console.log(inputs)
-
-    function ler() {
-        console.log(inputs)
+    function somar(){
+        let nuns = document.querySelectorAll("input")
+        nuns.forEach(function numeros(num){
+        num = parseInt(num.value) + parseInt(num.value)
+        console.log(num)
+         })
+        
     }
+    
+   
+
+    // let inputs = parseInt(document.querySelectorAll("input").value)
+    // var valor = parseInt(inputs.value);
+    // let numero1 = document.getElementsByName("um")
+
+    // console.log(numero1)
+    // console.log(valor)
+    // console.log(inputs)
+
+    
 
     
 
