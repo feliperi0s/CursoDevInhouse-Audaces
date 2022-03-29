@@ -8,29 +8,23 @@
 </head>
 <body>
     <div>
-        <input type="number" name="um" id="">
-        <input type="number" name="dos" id="">
-        <input type="number" name="tres" id="">
-        <input type="number" name="quatro" id="">
+        <input type="number" name="um" id="numeros">
+        <input type="number" name="dos" id="numeros">
+        <input type="number" name="tres" id="numeros">
+        <input type="number" name="quatro" id="numeros">
     </div>
     <div><button onclick="ler()">SOMAR</button></div>
 
 <script>
 
-    let inputs = document.querySelectorAll("input")
+    let inputs = document.getElementById("numeros").value
     console.log(inputs)
 
     function ler() {
-        let numberInput = inputs.value
+        console.log(inputs)
     }
 
-//    let zero = 0;
     
-//    inputs.forEach(numeros); 
-
-//     function somar(numeros) {
-//         zero += numeros;
-//     }
 
 
 </script>
