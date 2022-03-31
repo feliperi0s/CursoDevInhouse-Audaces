@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            top: 500px;
+        }
+
+        #pedra{
+          left: 700px;
+          width: 20%;
+        }
+    </style>
+</head>
+<body>
+    <img id="personagem" src="parado.png" style="position: absolute;">
+    <img id="pedra" src="pedra.png" style="position: absolute;">
+    <script>
+        const personagem = document.querySelector("#personagem")
+        let move = false;
+        let vaiPraCima = false;
+        let vaiPraBaixo= false;
+
+        let distanciaDaEsquerda = 0
+        let distanciaDeCima = 500
+
+        setInterval(()=>{
+            if(move == true){
+                distanciaDaEsquerda = distanciaDaEsquerda + 1
+                personagem.style.left = distanciaDaEsquerda + "px"
+                if(vaiPraCima == true){
+                    distanciaDeCima = distanciaDeCima - 1
+                    personagem.style.top = distanciaDeCima + "px"
+                }
+                if(vaiPraBaixo == true){
+                    distanciaDeCima = distanciaDeCima + 1
+                    personagem.style.top = distanciaDeCima + "px"
+                }
+                
+            }
+        },3)
+
+        //cronologia
+        setTimeout(()=>{
+
+            iniciaAnimacao()
+
+            setTimeout(()=>{
+                vaiPraCima = true;
+            },1300)
+
+            setTimeout(()=>{
+                vaiPraCima = false;
+                vaiPraBaixo = true;
+            },3000)
+
+            setTimeout(()=>{
+                vaiPraBaixo = false;
+            },4700)
+
+
+            setTimeout(()=>{
+                paraAnimacao()
+               
+            },6000)
+
+
+        },1000)
+        
+        function paraAnimacao(){
+            move = false;
+            personagem.src = "parado.png"
+           
+          
+        }
+        function iniciaAnimacao(){
+            move = true;
+            personagem.src = "running.gif"
+        }
+    </script>
+</body>
+</html>
