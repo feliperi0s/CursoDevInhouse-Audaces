@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex08</title>
+</head>
+<body>
+<button submit()  >Mudar</button>
+<select name="" id="select">
+    <option>Selecione</option>
+    <option value="" id="op01" onclick="teste()">Região norte</option>
+    <option value="">Região Nordeste</option>
+    <option value="">Região Centro-Oeste</option>
+    <option value="">Região Sudeste</option>
+    <option value="">Região Sul</option>
+</select>
+
+
+    <script>
+
+        function teste (){
+            let texto = document.createElement("h1")
+            texto.innerText = "asdsad"
+            document.body.append(texto)
+        }
+
+        let reg0 = document.getElementById("op01")
+        let reg1 = "10"
+        let reg2 = ""
+        let reg3 = ""
+        let reg4 = ""
+        let reg5 = ""
+        let url = "https://servicodados.ibge.gov.br/api/v1/projecoes/populacao"
+
+        fetch(url).then(function (naoFormatado){
+        return naoFormatado.json();
+        }).then(function (json){
+         
+        function mostrar() {
+        localidade0 = json.projecao.populacao 
+        let texto = document.createElement("h1")
+        texto.innerText = "asdsad"
+        document.body.append(texto)
+        }    
+
+        const bt01 = document.getElementById("op01")    
+        bt01.addEventListener("click",mostrar)
+
+        const localidade = json.projecao.populacao 
+        reg0 = json.projecao.populacao
+                
+        //console.log(reg0)       
+                
+        });
+
+         
+
+
+
+
+    </script>
+</body>
+</html>
