@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex10</title>
+</head>
+<body>
+    <input type="color" name="" id="color">
+    <input type="number" name="" id="number">
+    <button type="submit" onclick="salvaCor()">Adicionar</button>
+
+    <ul id="lista" style="list-style-type: number;">
+
+    </ul>
+
+
+<script>
+    document.getElementById("number").defaultValue=localStorage.getItem("preferencia")
+    let colorUpdate = localStorage.getItem("cores")
+        colorUpdate = colorUpdate.split(",") 
+    document.body.style.backgroundColor = colorUpdate[localStorage.getItem("preferencia")]
+    
+    function salvaCor() {
+        const cor = document.getElementById("color").value
+        let colors = localStorage.getItem("cores");
+        if (colors) {
+        localStorage.setItem("cores", [colors,cor]);    
+        }else {
+            localStorage.setItem("cores", cor);
+        }
+        let colorUpdate = localStorage.getItem("cores")
+        colorUpdate = colorUpdate.split(",")
+        for (let index = 0; index < colorUpdate.length; index++) {
+            
+        }
+
+        console.log(colorUpdate)
+    }
+
+    document.getElementById("number").addEventListener("change", (event)=>{
+         
+        if (colorUpdate[event.target.value] !== undefined) {
+        
+        document.body.style.backgroundColor = colorUpdate[event.target.value]    
+        localStorage.setItem("preferencia",event.target.value)
+        }
+         
+    })
+    
+
+</script>
+
+</body>
+</html>
