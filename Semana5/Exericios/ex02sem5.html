@@ -8,31 +8,56 @@
 </head>
 <body>
 
-    <input type="number" name="um" id="um" value="1">
-            <input type="number" name="dos" id="dois" value="2">
-            <input type="number" name="tres" id="tres" value="3">
-            <input type="number" name="quatro" id="quatro" value="2">
-            <button onclick="mostrar()">enviar</button>
+            <input type="number">
+            <input type="number">
+            <input type="number">
+            <input type="number">
+
+            <button>enviar</button>
     <script>
-            var soma = 0
-            let numeros = document.querySelectorAll("input")
         
+        const button = document.querySelector("button");
+        button.addEventListener("click",()=>{
+            const inputsCollection = document.querySelectorAll("input")
+            const inputs = Array.from(inputsCollection)
 
-            function mostrar() {
-                numeros.forEach(function somar (num) {
-                    soma=parseInt(num.value)
-                    console.log(soma)
+                let span ; 
 
-                    const dobrados = soma.map(function (n) {
-                    return n*2
-                    
+                let grupo1 = inputs.filter((inputEmQuestao)=>{
+                    const valor = parseFloat(inputEmQuestao.value)
+                if ( valor >= 0 && valor <= 1) {
+                    return true
+                } else{
+                    return false;
+                }
+ 
                 })
-                })
-                
-            }
+                    grupo1 = grupo1.map((inputEmQuestao)=>{
+                    const valor = parseFloat(inputEmQuestao.value)
+                    document.querySelectorAll("span").forEach((item)=>item.remove())
+                    span = document.createElement("span")
+                    const corDinamica = "#"+Math.floor(valor * 16777215).toString(16);
+                    span.innerText = corDinamica
+                    span.style.backgroundColor = corDinamica;
+                    return [span,inputEmQuestao];
+                    })
+                    grupo1.forEach((item)=>{
+                    const span = item[0]
+                    const input = item[1]
+                    input.insertAdjacentElement("afterend",span)
+                    input.style.border = "3px solid grey"
+            })
+            const grupo2 = inputs.filter((inputEmQuestao)=>{
+                if (!(parseFloat(inputEmQuestao.value) >= 0 && parseFloat(inputEmQuestao.value) <= 1)) {
+                    return inputEmQuestao 
+                }
+            })
 
+            grupo2.forEach((i)=>{
+                i.style.border = "3px solid red"
+            })
 
-            
+        })
             
         
 
