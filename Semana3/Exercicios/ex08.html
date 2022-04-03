@@ -9,9 +9,7 @@
 </head>
 
 <body>
-
-
-    <select name="" id="opcoes">
+    <select name="" id="select">
         <option value="">Selecione</option>
         <option value="1">Região norte</option>
         <option value="2">Região Nordeste</option>
@@ -22,7 +20,7 @@
     <h1 id="pop" style="text-align: center;"></h1>
     <script>
 
-        document.getElementById("opcoes").addEventListener("change", (Event) => {
+        document.getElementById("select").addEventListener("change", (Event) => {
             if (event.target.value !== '') {
                 let url = `https://servicodados.ibge.gov.br/api/v1/projecoes/populacao/${event.target.value}`
 
